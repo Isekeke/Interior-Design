@@ -1,0 +1,735 @@
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    overflow-x: hidden; /* This kills the horizontal scrollbar */
+    width: 100%;
+    position: relative;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+}
+
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #dcdcdc; /* white background */
+    font-family: 'Georgia', serif; /* Or a Google Font like Playfair Display */
+    color: #808080;
+}
+
+/* Header Container */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 8%; /* Generous spacing */
+    background-color: transparent;
+}
+
+/* Logo Styling */
+.logo {
+    font-size: 1.2rem;
+    letter-spacing: 6px; /* High-end fashion/design look */
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Space between links */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #808080; /* A muted green color for hover */
+}
+
+/* The Inquire Button */
+.inquire-btn {
+    border: 1px solid #333;
+    padding: 10px 25px;
+    transition: all 0.3s ease !important;
+}
+
+.inquire-btn:hover {
+    background-color:#808080;
+    color: #dcdcdc !important;
+}
+
+/* Hero Section */
+.hero {
+    height: 90vh; /* Takes up 90% of the screen height */
+    background-image: url('talePICS1.jpg'); 
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Adds a subtle dark layer so white text is readable over the photo */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.hero-subtitle {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.hero-cta {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 40px;
+    background-color: #fff;
+    color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    transition: 0.4s;
+}
+
+.hero-cta:hover {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+/* Define the typing animation */
+@keyframes typingAnimation {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Apply the animation to a text container */
+.typing-text {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typingAnimation 3s steps(30, end); /*Evey space tells a story  */
+}
+
+/* --- Method Section Styling --- */
+
+.method-section {
+    padding: 100px 8%;
+    background-color: #dcdcdc;
+}
+
+.method-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+/* Flexbox setup for the 5 stages */
+.method-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.method-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Stacks items horizontally */
+    position: relative;
+}
+
+/* Styling the images */
+.method-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 20px;
+   
+}
+
+
+/* Typography */
+.stage-number {
+    display: block;
+    font-size: 3rem;
+    font-family: 'serif';
+    color: #e0e0e0;
+    font-weight: 300;
+    margin-bottom: 15px; /* Overlap effect */
+    z-index: 1;
+}
+
+.method-item h3 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    color: #333;
+    z-index: 2; /* Sits above the number */
+}
+
+.method-item p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #777;
+}
+
+/* Connecting Line between items */
+.method-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 15px;
+    width: 30px;
+    height: 1px;
+    background-color: #eee;
+}
+
+
+.about-section {
+    padding: 100px 0;
+    background-color: #dcdcdc; 
+    font-family: 'Playfair Display', serif;
+    color: #333;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-subtitle {
+    color: #b8b8b8;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.section-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    height: 50%;
+}
+    
+
+
+.Our-Method-section {
+    padding: 100px 20px;
+    background-color:#F5F5DC;
+    font-family: 'Playfair Display', serif;
+    color: #333;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-subtitle {
+    color: #b8b8b8;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.section-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.project-card img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+.project-info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: black;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.project-info h3 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.project-info p {
+    margin: 5px 0 0;
+    font-size: 16px;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+    .section-title {
+        font-size: 32px;
+    }
+    .project-info h3 {
+        font-size: 20px;
+    }
+    .project-info p {
+        font-size: 14px;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Stacked for mobile */
+    padding: 20px;
+    gap: 20px;
+}
+
+.testimonials-section {
+    padding: 100px 20px;
+    background-color: #dcdcdc;
+    font-family: 'Playfair Display', serif;
+    color: black;
+}
+
+.testimonial {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.testimonial-text {
+    font-size: 26px;
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.testimonial-author {
+    font-size: 16px;
+    color: #777;
+    letter-spacing: 1px;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+    .testimonial-text {
+        font-size: 20px;
+    }
+}
+
+.services-section {
+    padding: 100px 0;
+    background-color: #dcdcdc; 
+    font-family: 'Playfair Display', serif;
+    color: black;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-subtitle {
+    color: #b8b8b8;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.section-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.services-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.services-text {
+    flex: 1;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.services-text p {
+    margin-bottom: 20px;
+}
+
+.services-image {
+    flex: 1;
+}
+
+.select-image img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+    
+.color-consultation-section {
+    padding: 100px 0;
+    background-color: #ffffff; 
+    font-family: 'Playfair Display', serif;
+    color: #333;
+}
+
+.color-consultation-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+
+.color-consultation-subtitle {
+    color: #b8b8b8;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.color-consultation-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.color-consultation-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.color-consultation-text {
+    flex: 1;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.color-consultation-text p {
+    margin-bottom: 20px;
+}
+
+.color-consultation-image {
+    flex: 1;
+}
+
+.color-consultation-image img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+    
+/* The main wrapper for each item */
+.accordion {
+    width: 100%;
+    max-width: 800px;
+    margin: 10px auto;
+    border-radius: 8px;
+    overflow: hidden; /* Keeps background colors inside rounded corners */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* 1. Style the Header (The Clickable Button) */
+.accordion-header {
+    width: 100%;
+    padding: 20px;
+    background-color: #808080; /* Background */
+    color: white;
+    text-align: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Hover effect on header */
+.accordion-header:hover {
+    background-color: black; /* Slightly darker green */
+}
+
+/* 2. Style the Content Box */
+.accordion-content {
+    background-color: #fdf7f2; /* Light cream background */
+    padding: 0 20px;           /* No vertical padding while closed */
+    max-height: 0;             /* Hidden by default */
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease;
+}
+
+/* The text inside the content */
+.accordion-content p, .accordion-content li {
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+    margin: 15px 0;
+}
+
+/* 3. The "Active" state */
+/* Use this class with Javascript to open the accordion */
+.accordion-content.active {
+    max-height: 1000px; /* Large enough to fit the Covid protocol list */
+    padding: 10px 20px;
+}
+
+.testimonial-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow testimonials to wrap onto multiple lines */
+    gap: 20px; /* Space between testimonials */
+    background-color: #808080;
+    padding: 20px;
+}
+.testimonial {
+flex: 1; /* Allow testimonials to grow and fill the space /
+min-width: 250px; /* Minimum width of a testimonial */
+display: flex;
+flex-direction: column; /* Stack content vertically */
+align-items: center; / Align items in the center */
+padding: 20px;
+border: 1px solid #eee;
+background-color: white;
+}
+
+.testimonial img {
+border-radius: 50%; /* Make the image circular */
+width: 100px;
+height: 100px;
+margin-bottom: 20px;
+}
+
+.testimonial p {
+flex-grow: 1; /* Allow the testimonial text to take up available space */
+text-align: center; /* Center-align the testimonial text */
+}
+
+.testimonial .name {
+font-weight: bold;
+margin-top: 20px;
+}
+
+/* Dark background that covers the whole screen */
+.modal-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 9999; /* Sits on top of everything */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7); /* Black with opacity */
+    backdrop-filter: blur(5px); /* Optional: blurs the background */
+}
+
+/* The white box in the middle */
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 40px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+}
+
+/* The 'X' close button */
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+}
+
+
+@media screen and (max-width: 768px) {
+    /* Stack the header links */
+    .nav-links {
+        display: none; /* Usually, you'd replace this with a burger menu */
+    }
+
+    /* Stack Method Items vertically */
+    .method-container {
+        flex-direction: column;
+    }
+
+    /* Stack Service Sections (Image on top, Text on bottom) */
+    .services-content, .about-content, .color-consultation-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Fix Hero Font Size */
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        white-space: normal; /* Allow text to wrap on phones */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
